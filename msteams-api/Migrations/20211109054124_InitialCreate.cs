@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace msteams_api.Migrations
 {
@@ -13,7 +14,7 @@ namespace msteams_api.Migrations
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     createdBy = table.Column<int>(type: "int", nullable: false),
-                    createdTime = table.Column<byte>(type: "tinyint", rowVersion: true, nullable: false),
+                    createdTime = table.Column<DateTime>(type: "datetime2", rowVersion: true, nullable: false),
                     content = table.Column<string>(type: "nvarchar(300)", nullable: true)
                 },
                 constraints: table =>
@@ -29,7 +30,7 @@ namespace msteams_api.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     postId = table.Column<int>(type: "int", nullable: false),
                     replySenderId = table.Column<int>(type: "int", nullable: false),
-                    repliedTime = table.Column<byte>(type: "tinyint", rowVersion: true, nullable: false),
+                    repliedTime = table.Column<DateTime>(type: "datetime2", rowVersion: true, nullable: false),
                     content = table.Column<string>(type: "nvarchar(300)", nullable: true)
                 },
                 constraints: table =>

@@ -17,7 +17,7 @@ namespace msteams_api.Models
         public int replySenderId { get; set; }
 
         [Timestamp]
-        public byte repliedTime { get; set; }
+        public DateTime repliedTime { get; set; }
 
         [Column(TypeName = "nvarchar(300)")]
         public string content { get; set; }

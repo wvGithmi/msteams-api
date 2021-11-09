@@ -15,7 +15,7 @@ namespace msteams_api.Models
         public int createdBy { get; set; }
 
         [Timestamp]
-        public byte createdTime { get; set; }
+        public DateTime? createdTime { get; set; }
 
         [Column(TypeName = "nvarchar(300)")]
         public string content { get; set; }

@@ -77,6 +77,7 @@ namespace msteams_api.Controllers
         [HttpPost]
         public async Task<ActionResult<Post>> PostPost(Post post)
         {
+            Console.WriteLine(post.createdTime.ToString());
             _context.Posts.Add(post);
             await _context.SaveChangesAsync();
 
